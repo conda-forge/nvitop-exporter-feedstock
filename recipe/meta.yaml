@@ -1,5 +1,5 @@
 {% set name = "nvitop-exporter" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,9 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name|replace("-", "_") }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: 70b1793f4c23b2c703216422816e1916a6162d78b8035ff9183301d5d098e86d
+  sha256: 857f10d235a266eebe4a14d83d7dd61dda01b8ee63e66b20750d7398045c1834
 
 build:
-  # Package `windows-curses` is not available yet
   noarch: python
   entry_points:
     - nvitop-exporter = nvitop_exporter.cli:main
@@ -23,7 +22,7 @@ requirements:
     - setuptools
     - python {{ python_min }}
   run:
-    - nvitop =={{ version }}
+    - nvitop ~={{ version }}
     - prometheus_client >=0.4.0
     - python >={{ python_min }}
 
