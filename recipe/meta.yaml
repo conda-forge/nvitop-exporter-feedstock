@@ -1,5 +1,5 @@
 {% set name = "nvitop-exporter" %}
-{% set version = "1.5.3" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name|replace("-", "_") }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: b5f23aa6cff4db32db99026951f1407847988fad59983626e8a4f6511182b6c5
+  sha256: a3d4e9d0bd8126304cde328790f503aea01a05d41ec26e0690c81178ac9debf5
 
 build:
   noarch: python
