@@ -1,13 +1,13 @@
 {% set name = "nvitop-exporter" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name|replace("-", "_") }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: f9a75715f29043c543f5ee4a16e37b13fdbb3eba573d50f8126c5dc271626f5a
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name|replace("-", "_") }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
+  sha256: cbe8606266e72d7e809d1923bac6b307ed9874f661232670aff85ca49815d3eb
 
 build:
   noarch: python
